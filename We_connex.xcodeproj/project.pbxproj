@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F5254B631A7362DE00DFC5BC /* ConnectUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = F5254B621A7362DE00DFC5BC /* ConnectUrl.m */; };
+		F5254B661A73634100DFC5BC /* Connect_Url.m in Sources */ = {isa = PBXBuildFile; fileRef = F5254B651A73634100DFC5BC /* Connect_Url.m */; };
 		F594D7C41A6E26B4002BE7C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F594D7C31A6E26B4002BE7C3 /* main.m */; };
 		F594D7C71A6E26B4002BE7C3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F594D7C61A6E26B4002BE7C3 /* AppDelegate.m */; };
 		F594D7CA1A6E26B4002BE7C3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F594D7C91A6E26B4002BE7C3 /* ViewController.m */; };
@@ -14,6 +16,7 @@
 		F594D7CF1A6E26B4002BE7C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F594D7CE1A6E26B4002BE7C3 /* Images.xcassets */; };
 		F594D7D21A6E26B4002BE7C3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F594D7D01A6E26B4002BE7C3 /* LaunchScreen.xib */; };
 		F594D7DE1A6E26B4002BE7C3 /* We_connexTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F594D7DD1A6E26B4002BE7C3 /* We_connexTests.m */; };
+		F5BAB3031A7367E5007794D2 /* Profile_Area_Service.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BAB3021A7367E5007794D2 /* Profile_Area_Service.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F5254B621A7362DE00DFC5BC /* ConnectUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectUrl.m; sourceTree = "<group>"; };
+		F5254B641A73634100DFC5BC /* Connect_Url.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connect_Url.h; sourceTree = "<group>"; };
+		F5254B651A73634100DFC5BC /* Connect_Url.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Connect_Url.m; sourceTree = "<group>"; };
 		F594D7BE1A6E26B4002BE7C3 /* We_connex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = We_connex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F594D7C21A6E26B4002BE7C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F594D7C31A6E26B4002BE7C3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +46,8 @@
 		F594D7D71A6E26B4002BE7C3 /* We_connexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = We_connexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F594D7DC1A6E26B4002BE7C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F594D7DD1A6E26B4002BE7C3 /* We_connexTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = We_connexTests.m; sourceTree = "<group>"; };
+		F5BAB3011A7367E5007794D2 /* Profile_Area_Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile_Area_Service.h; sourceTree = "<group>"; };
+		F5BAB3021A7367E5007794D2 /* Profile_Area_Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile_Area_Service.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +97,11 @@
 				F594D7CE1A6E26B4002BE7C3 /* Images.xcassets */,
 				F594D7D01A6E26B4002BE7C3 /* LaunchScreen.xib */,
 				F594D7C11A6E26B4002BE7C3 /* Supporting Files */,
+				F5254B621A7362DE00DFC5BC /* ConnectUrl.m */,
+				F5254B641A73634100DFC5BC /* Connect_Url.h */,
+				F5254B651A73634100DFC5BC /* Connect_Url.m */,
+				F5BAB3011A7367E5007794D2 /* Profile_Area_Service.h */,
+				F5BAB3021A7367E5007794D2 /* Profile_Area_Service.m */,
 			);
 			path = We_connex;
 			sourceTree = "<group>";
@@ -168,6 +181,7 @@
 				TargetAttributes = {
 					F594D7BD1A6E26B4002BE7C3 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = ATLPP29258;
 					};
 					F594D7D61A6E26B4002BE7C3 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -219,8 +233,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5254B631A7362DE00DFC5BC /* ConnectUrl.m in Sources */,
 				F594D7CA1A6E26B4002BE7C3 /* ViewController.m in Sources */,
 				F594D7C71A6E26B4002BE7C3 /* AppDelegate.m in Sources */,
+				F5254B661A73634100DFC5BC /* Connect_Url.m in Sources */,
+				F5BAB3031A7367E5007794D2 /* Profile_Area_Service.m in Sources */,
 				F594D7C41A6E26B4002BE7C3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,6 +360,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = We_connex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -353,6 +371,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = We_connex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -412,6 +431,7 @@
 				F594D7E31A6E26B4002BE7C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F594D7E41A6E26B4002BE7C3 /* Build configuration list for PBXNativeTarget "We_connexTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +440,7 @@
 				F594D7E61A6E26B4002BE7C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
