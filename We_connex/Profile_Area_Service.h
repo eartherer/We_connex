@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface Profile_Area_Service : NSObject
-+(NSObject*)getAreaByLocationWithRadius:(NSString*)radius
-                            AndLatitude:(NSString*)la
-                           AndLongitude:(NSString*)lo;
++(NSObject*)getAreaByLocationWithRadius:(float)radius
+                            AndLatitude:(float)la
+                           AndLongitude:(float)lo;
 
 +(NSObject*)getAreaByAreaID:(NSString*)AreaID;
 

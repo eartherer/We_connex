@@ -11,10 +11,10 @@
 
 @implementation Profile_Area_Service
 
-+(NSObject*)getAreaByLocationWithRadius:(NSString*)radius
-                            AndLatitude:(NSString*)la
-                           AndLongitude:(NSString*)lo{
-    NSString* myurl = [NSString stringWithFormat:@"http://beeconnex.azurewebsites.net/area.php?OP=show_arearad&cla=%@&clo=%@&rad=%@",la,lo,radius];
++(NSObject*)getAreaByLocationWithRadius:(float)radius
+                            AndLatitude:(float)la
+                           AndLongitude:(float)lo{
+    NSString* myurl = [NSString stringWithFormat:@"http://beeconnex.azurewebsites.net/area.php?OP=show_arearad&cla=%f&clo=%f&rad=%f",la,lo,radius];
     //NSObject *resultObj = [self getDataWithURL:myurl];
     id resultObj = [Connect_Url getDataWithURL:myurl];
     return resultObj;
