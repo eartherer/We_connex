@@ -17,4 +17,6 @@
 
 +(NSObject*)getProfileByID:(NSString*)numberID;
 
++(NSObject*)LoginWithUsername:(NSString*)user
+                  AndPassword:(NSString*)Pass;
 @end

@@ -35,4 +35,11 @@
     return resultObj;
 }
 
++(NSObject*)LoginWithUsername:(NSString*)user
+                  AndPassword:(NSString*)Pass{
+    NSString* myurl = [NSString stringWithFormat:@"http://beeconnex.azurewebsites.net/get_token.php?OP=get_token&user=%@&pass=%@",user,Pass];
+    //NSObject *resultObj = [self getDataWithURL:myurl];
+    id resultObj = [Connect_Url getDataWithURL:myurl];
+    return resultObj;
+}
 @end
