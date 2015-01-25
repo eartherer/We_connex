@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "Profile_Area_Service.h"
+#import "News_Service.h"
 @interface ViewController ()
 -(NSObject*)getDataWithURL:(NSString*)dst_url;
 @end
@@ -17,7 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    [self getProfileByID:@"1103700881913"];
-    [Profile_Area_Service getAreaByAreaID:@"4"];
+    //[Profile_Area_Service getAreaByAreaID:@"4"];
+    [News_Service getNews];
     //[self getAreaByLocationWithRadius:@"50" AndLatitude:@"13" AndLongitude:@"100"];
     // Do any additional setup after loading the view, typically from a nib.
 }
