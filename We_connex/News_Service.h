@@ -10,4 +10,9 @@
 
 @interface News_Service : NSObject
 +(NSObject*)getNews;
++(NSObject*)createNewsWithTitle:(NSString*)Title
+                           Body:(NSString*)Body
+                       lalitude:(float)latitude
+                      longitude:(float)longitude
+                          token:(NSString*)token;
 @end

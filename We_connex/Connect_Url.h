@@ -10,4 +10,7 @@
 
 @interface Connect_Url : NSObject
 +(id)getDataWithURL:(NSString*)dst_url;
+
++(id)getDataWithURL:(NSString *)dst_url
+  WithPostParameter:(NSString*)para;
 @end

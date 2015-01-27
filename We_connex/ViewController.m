@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "News_Service.h"
+#import "Connect_Url.h"
 @interface ViewController ()
 -(NSObject*)getDataWithURL:(NSString*)dst_url;
 @end
@@ -16,9 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [News_Service createNewsWithTitle:@"Xcode" Body:@"fromcode" lalitude:14.55 longitude:101.44 token:@"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9iZWVjb25uZXguYXp1cmV3ZWJzaXRlcy5uZXQiLCJhdWQiOiJodHRwOlwvXC9iZWVjb25uZXguYXp1cmV3ZWJzaXRlcy5uZXQiLCJpYXQiOjE0MjIzMzE4MDAsImV4cCI6MTQyMjMzNTQwMCwidXNlcm5hbWUiOiJhZG1pbiIsIklEIjoiMTEwMzcwMDk5MTkxMyJ9.7Epks8rziq_z5EQ9t7GLS39n-a_cl5109ivPxsbei_w"];
+    //[Connect_Url getDataWithURL:@"f" WithPostParameter:@"GG"];
 //    [self getProfileByID:@"1103700881913"];
     //[Profile_Area_Service getAreaByAreaID:@"4"];
-    [News_Service getNews];
+    //[News_Service getNews];
     //[self getAreaByLocationWithRadius:@"50" AndLatitude:@"13" AndLongitude:@"100"];
     // Do any additional setup after loading the view, typically from a nib.
 }

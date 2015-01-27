@@ -15,4 +15,14 @@
     id resultObj = [Connect_Url getDataWithURL:myurl];
     return resultObj;
 }
+
++(NSObject*)createNewsWithTitle:(NSString*)Title
+                           Body:(NSString*)Body
+                       lalitude:(float)latitude
+                      longitude:(float)longitude
+                          token:(NSString*)token{
+    NSString *bodyData = [NSString stringWithFormat:@"Title=%@&Body=%@&latitude=%f&longitude=%f&token=%@",Title,Body,latitude,longitude,token];
+    NSString *targetUrl = @"http://beeconnex.azurewebsites.net/add_news.php?OP=add";
+    return [Connect_Url getDataWithURL:targetUrl WithPostParameter:bodyData];
+}
 @end
