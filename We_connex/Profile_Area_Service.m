@@ -11,6 +11,17 @@
 
 @implementation Profile_Area_Service
 
++(NSObject*)registerWithUsername:(NSString*)username
+                       Password:(NSString*)password
+                             ID:(NSString*)numberID
+                          Email:(NSString*)Email{
+    NSString *bodyData = [NSString stringWithFormat:@"user=%@&pass=%@&email=%@&numberid=%@",username,password,Email,numberID];
+    NSString *targetUrl = @"http://beeconnex.azurewebsites.net/reg.php";
+    return [Connect_Url getDataWithURL:targetUrl WithPostParameter:bodyData];
+}
+
+
+
 +(NSObject*)getAreaByLocationWithRadius:(float)radius
                             AndLatitude:(float)la
                            AndLongitude:(float)lo{

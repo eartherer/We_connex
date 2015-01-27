@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "News_Service.h"
+#import "Alert_Service.h"
+#import "Profile_Area_Service.h"
 #import "Connect_Url.h"
 @interface ViewController ()
 -(NSObject*)getDataWithURL:(NSString*)dst_url;
@@ -17,7 +19,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [News_Service createNewsWithTitle:@"Xcode" Body:@"fromcode" lalitude:14.55 longitude:101.44 token:@"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9iZWVjb25uZXguYXp1cmV3ZWJzaXRlcy5uZXQiLCJhdWQiOiJodHRwOlwvXC9iZWVjb25uZXguYXp1cmV3ZWJzaXRlcy5uZXQiLCJpYXQiOjE0MjIzMzE4MDAsImV4cCI6MTQyMjMzNTQwMCwidXNlcm5hbWUiOiJhZG1pbiIsIklEIjoiMTEwMzcwMDk5MTkxMyJ9.7Epks8rziq_z5EQ9t7GLS39n-a_cl5109ivPxsbei_w"];
+//    [News_Service createNewsWithTitle:@"Xcode" Body:@"fromcode" lalitude:14.55 longitude:101.44 token:@"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9iZWVjb25uZXguYXp1cmV3ZWJzaXRlcy5uZXQiLCJhdWQiOiJodHRwOlwvXC9iZWVjb25uZXguYXp1cmV3ZWJzaXRlcy5uZXQiLCJpYXQiOjE0MjIzMzE4MDAsImV4cCI6MTQyMjMzNTQwMCwidXNlcm5hbWUiOiJhZG1pbiIsIklEIjoiMTEwMzcwMDk5MTkxMyJ9.7Epks8rziq_z5EQ9t7GLS39n-a_cl5109ivPxsbei_w"];
+//    [Alert_Service createAlertWithTitle:@"Xcode" Body:@"fromcode" lalitude:14.55 longitude:101.44 Group: @"All" token:@"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9iZWVjb25uZXguYXp1cmV3ZWJzaXRlcy5uZXQiLCJhdWQiOiJodHRwOlwvXC9iZWVjb25uZXguYXp1cmV3ZWJzaXRlcy5uZXQiLCJpYXQiOjE0MjIzMzE4MDAsImV4cCI6MTQyMjMzNTQwMCwidXNlcm5hbWUiOiJhZG1pbiIsIklEIjoiMTEwMzcwMDk5MTkxMyJ9.7Epks8rziq_z5EQ9t7GLS39n-a_cl5109ivPxsbei_w"];
+    NSObject *obj = [Profile_Area_Service registerWithUsername:@"xcode" Password:@"123456" ID:@"1103700111913" Email:@"xcoode@hotmail.com"];
+    
     //[Connect_Url getDataWithURL:@"f" WithPostParameter:@"GG"];
 //    [self getProfileByID:@"1103700881913"];
     //[Profile_Area_Service getAreaByAreaID:@"4"];

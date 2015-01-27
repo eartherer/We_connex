@@ -19,4 +19,9 @@
 
 +(NSObject*)LoginWithUsername:(NSString*)user
                   AndPassword:(NSString*)Pass;
+
++(NSObject*)registerWithUsername:(NSString*)username
+                        Password:(NSString*)password
+                              ID:(NSString*)numberID
+                           Email:(NSString*)Email;
 @end

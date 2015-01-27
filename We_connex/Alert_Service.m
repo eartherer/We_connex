@@ -9,6 +9,17 @@
 #import "Alert_Service.h"
 #import "Connect_Url.h"
 @implementation Alert_Service
++(NSObject*)createAlertWithTitle:(NSString*)Title
+                            Body:(NSString*)Body
+                        lalitude:(float)latitude
+                       longitude:(float)longitude
+                           Group:(NSString*)group
+                           token:(NSString*)token{
+    NSString *bodyData = [NSString stringWithFormat:@"Title=%@&Body=%@&latitude=%f&longitude=%f&token=%@&group=%@",Title,Body,latitude,longitude,token,group];
+    NSString *targetUrl = @"http://beeconnex.azurewebsites.net/add_alert.php?OP=add";
+    return [Connect_Url getDataWithURL:targetUrl WithPostParameter:bodyData];
+}
+
 +(NSObject*)getAlertList{
     NSString* myurl = [NSString stringWithFormat:@"http://beeconnex.azurewebsites.net/alert.php?OP=show_all"];
     //NSObject *resultObj = [self getDataWithURL:myurl];
