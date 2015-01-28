@@ -20,7 +20,25 @@
     return [Connect_Url getDataWithURL:targetUrl WithPostParameter:bodyData];
 }
 
-
++(NSObject*)createProfileWithName:(NSString*)name
+                          Surname:(NSString*)surname
+                              sex:(int)sex
+                         Birthday:(NSString*)birthday
+                         House_No:(NSString*)houseno
+                       Village_No:(NSString*)villageno
+                            Alley:(NSString*)alley
+                             Road:(NSString*)road
+                     Sub_District:(NSString*)sub_district
+                         District:(NSString*)district
+                         Province:(NSString*)province
+                         Zip_Code:(NSString*)zipcode
+                     Phone_Number:(NSString*)phonenumber
+               MobilePhone_Number:(NSString*)mobilephone
+                            Token:(NSString*)token{
+    NSString* bodyData = [NSString stringWithFormat:@"name=%@&surname=%@&sex=%d&birthday=%@&house_no=%@&village_no=%@&alley=%@&road=%@&sub_district=%@&district=%@&province=%@&zip_code=%@&phone_number=%@&mobilephone_number=%@&token=%@",name,surname,sex,birthday,houseno,villageno,alley,road,sub_district,district,province,zipcode,phonenumber,mobilephone,token];
+    NSString *targetUrl = @"http://beeconnex.azurewebsites.net/add_Profile.php?OP=add";
+    return [Connect_Url getDataWithURL:targetUrl WithPostParameter:bodyData];
+}
 
 +(NSObject*)getAreaByLocationWithRadius:(float)radius
                             AndLatitude:(float)la

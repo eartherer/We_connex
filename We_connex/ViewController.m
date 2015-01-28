@@ -21,8 +21,8 @@
     [super viewDidLoad];
 //    [News_Service createNewsWithTitle:@"Xcode" Body:@"fromcode" lalitude:14.55 longitude:101.44 token:@"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9iZWVjb25uZXguYXp1cmV3ZWJzaXRlcy5uZXQiLCJhdWQiOiJodHRwOlwvXC9iZWVjb25uZXguYXp1cmV3ZWJzaXRlcy5uZXQiLCJpYXQiOjE0MjIzMzE4MDAsImV4cCI6MTQyMjMzNTQwMCwidXNlcm5hbWUiOiJhZG1pbiIsIklEIjoiMTEwMzcwMDk5MTkxMyJ9.7Epks8rziq_z5EQ9t7GLS39n-a_cl5109ivPxsbei_w"];
 //    [Alert_Service createAlertWithTitle:@"Xcode" Body:@"fromcode" lalitude:14.55 longitude:101.44 Group: @"All" token:@"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9iZWVjb25uZXguYXp1cmV3ZWJzaXRlcy5uZXQiLCJhdWQiOiJodHRwOlwvXC9iZWVjb25uZXguYXp1cmV3ZWJzaXRlcy5uZXQiLCJpYXQiOjE0MjIzMzE4MDAsImV4cCI6MTQyMjMzNTQwMCwidXNlcm5hbWUiOiJhZG1pbiIsIklEIjoiMTEwMzcwMDk5MTkxMyJ9.7Epks8rziq_z5EQ9t7GLS39n-a_cl5109ivPxsbei_w"];
-    NSObject *obj = [Profile_Area_Service registerWithUsername:@"xcode" Password:@"123456" ID:@"1103700111913" Email:@"xcoode@hotmail.com"];
-    
+//    NSObject *obj = [Profile_Area_Service registerWithUsername:@"xcode2" Password:@"123456" ID:@"1103700221913" Email:@"xcoode2@hotmail.com"];
+    NSObject *obj = [Profile_Area_Service createProfileWithName:@"testxcode" Surname:@"GGGG" sex:1 Birthday:@"2011-07-09" House_No:@"129" Village_No:@"gogo" Alley:@"popo" Road:@"pracha" Sub_District:@"dindin" District:@"dindeang" Province:@"bangkok" Zip_Code:@"10400" Phone_Number:@"0889999999" MobilePhone_Number:@"02098213123" Token:@"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9iZWVjb25uZXguYXp1cmV3ZWJzaXRlcy5uZXQiLCJhdWQiOiJodHRwOlwvXC9iZWVjb25uZXguYXp1cmV3ZWJzaXRlcy5uZXQiLCJpYXQiOjE0MjIzNzM5NTUsImV4cCI6MTQyMjM3NzU1NSwidXNlcm5hbWUiOiJ4Y29kZTIiLCJJRCI6IjExMDM3MDAyMjE5MTMifQ.Dsz0VDZz-1gCUbXCqxU3TSXCmdn5L4sL1n7MLfv208Q"];
     //[Connect_Url getDataWithURL:@"f" WithPostParameter:@"GG"];
 //    [self getProfileByID:@"1103700881913"];
     //[Profile_Area_Service getAreaByAreaID:@"4"];

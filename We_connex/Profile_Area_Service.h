@@ -24,4 +24,20 @@
                         Password:(NSString*)password
                               ID:(NSString*)numberID
                            Email:(NSString*)Email;
+
++(NSObject*)createProfileWithName:(NSString*)name
+                          Surname:(NSString*)surname
+                              sex:(int)sex
+                         Birthday:(NSString*)birthday
+                         House_No:(NSString*)houseno
+                       Village_No:(NSString*)villageno
+                            Alley:(NSString*)alley
+                             Road:(NSString*)road
+                     Sub_District:(NSString*)sub_district
+                         District:(NSString*)district
+                         Province:(NSString*)province
+                         Zip_Code:(NSString*)zipcode
+                     Phone_Number:(NSString*)phonenumber
+               MobilePhone_Number:(NSString*)mobilephone
+                            Token:(NSString*)token;
 @end
