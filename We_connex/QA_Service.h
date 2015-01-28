@@ -9,6 +9,15 @@
 #import <Foundation/Foundation.h>
 
 @interface QA_Service : NSObject
+
++createTopicWithTitle:(NSString*)Title
+                 Body:(NSString*)Body
+                Token:(NSString*)token;
+
++createReplyWithTopicID:(NSString*)topicid
+                   Body:(NSString*)Body
+                  Token:(NSString*)token;
+
 +(NSObject*)getTopicList;
 +(NSObject*)getTopicByTopicID:(int)ID;
 +(NSObject*)getReplyListByTopicID:(int)ID;

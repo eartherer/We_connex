@@ -11,6 +11,24 @@
 
 @implementation QA_Service
 
++createTopicWithTitle:(NSString*)Title
+                 Body:(NSString*)Body
+                Token:(NSString*)token{
+    NSString *bodyData = [NSString stringWithFormat:@"Title=%@&Body=%@&token=%@",Title,Body,token];
+    NSString *targetUrl = @"http://beeconnex.azurewebsites.net/add_topic.php?OP=add";
+    return [Connect_Url getDataWithURL:targetUrl WithPostParameter:bodyData];
+   
+}
+
++createReplyWithTopicID:(NSString*)topicid
+                 Body:(NSString*)Body
+                Token:(NSString*)token{
+    NSString *bodyData = [NSString stringWithFormat:@"topicid=%@&body=%@&token=%@",topicid,Body,token];
+    NSString *targetUrl = @"http://beeconnex.azurewebsites.net/add_reply.php?OP=add";
+    return [Connect_Url getDataWithURL:targetUrl WithPostParameter:bodyData];
+    
+}
+
 +(NSObject*)getTopicList{
     NSString* myurl = [NSString stringWithFormat:@"http://beeconnex.azurewebsites.net/qa.php?OP=topic_all"];
     //NSObject *resultObj = [self getDataWithURL:myurl];
