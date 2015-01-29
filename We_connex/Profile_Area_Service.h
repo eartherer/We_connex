@@ -40,4 +40,20 @@
                      Phone_Number:(NSString*)phonenumber
                MobilePhone_Number:(NSString*)mobilephone
                             Token:(NSString*)token;
+
++(NSObject*)createAreaWithLatitude:(float)latitude
+                         Longitude:(float)longitude
+                           isOwner:(int)isOwner
+                              Size:(float)size
+                          AreaType:(NSString*)area_type
+                          LandType:(NSString*)land_type
+                           HouseNo:(NSString*)houseno
+                         VillageNo:(NSString*)villageno
+                             Alley:(NSString*)alley
+                              Road:(NSString*)road
+                      Sub_District:(NSString*)sub_district
+                          District:(NSString*)district
+                          Province:(NSString*)province
+                          Zip_Code:(NSString*)zipcode
+                             Token:(NSString*)token;
 @end

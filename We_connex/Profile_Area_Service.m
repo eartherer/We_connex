@@ -40,6 +40,27 @@
     return [Connect_Url getDataWithURL:targetUrl WithPostParameter:bodyData];
 }
 
++(NSObject*)createAreaWithLatitude:(float)latitude
+                         Longitude:(float)longitude
+                           isOwner:(int)isOwner
+                              Size:(float)size
+                          AreaType:(NSString*)area_type
+                          LandType:(NSString*)land_type
+                           HouseNo:(NSString*)houseno
+                         VillageNo:(NSString*)villageno
+                             Alley:(NSString*)alley
+                              Road:(NSString*)road
+                      Sub_District:(NSString*)sub_district
+                          District:(NSString*)district
+                          Province:(NSString*)province
+                          Zip_Code:(NSString*)zipcode
+                             Token:(NSString*)token{
+    NSString* bodyData = [NSString stringWithFormat:@"latitude=%f&longitude=%f&isOwner=%d&size=%f&area_type=%@&land_type=%@&house_no=%@&village_no=%@&alley=%@&road=%@&sub_district=%@&district=%@&province=%@&zip_code=%@&token=%@",latitude,longitude,isOwner,size,area_type,land_type,houseno,villageno,alley,road,sub_district,district,province,zipcode,token];
+    NSString *targetUrl = @"http://beeconnex.azurewebsites.net/add_Area.php?OP=add";
+    return [Connect_Url getDataWithURL:targetUrl WithPostParameter:bodyData];
+}
+
+
 +(NSObject*)getAreaByLocationWithRadius:(float)radius
                             AndLatitude:(float)la
                            AndLongitude:(float)lo{
