@@ -7,8 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 @interface Profile_Area_Service : NSObject
+
++(NSObject*)uploadProfileImage:(UIImage*)image
+                         token:(NSString*)token;
+
 +(NSObject*)getAreaByLocationWithRadius:(float)radius
                             AndLatitude:(float)la
                            AndLongitude:(float)lo;

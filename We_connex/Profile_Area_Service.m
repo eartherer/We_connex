@@ -92,4 +92,11 @@
     id resultObj = [Connect_Url getDataWithURL:myurl];
     return resultObj;
 }
+
++(NSObject*)uploadProfileImage:(UIImage*)image
+                         token:(NSString*)token{
+    NSData *imageData = UIImageJPEGRepresentation(image, 1);
+    
+    return [Connect_Url uploadDataWithURL:@"http://beeconnex.azurewebsites.net/up_file.php?op=up" Data:imageData Token:token];
+}
 @end

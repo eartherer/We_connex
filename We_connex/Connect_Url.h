@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface Connect_Url : NSObject
++(id)uploadDataWithURL:(NSString*)url
+                  Data:(NSData*)data
+                 Token:(NSString*)token;
+
 +(id)getDataWithURL:(NSString*)dst_url;
 
 +(id)getDataWithURL:(NSString *)dst_url

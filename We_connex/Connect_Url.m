@@ -10,6 +10,56 @@
 
 @implementation Connect_Url
 
++(id)uploadDataWithURL:(NSString*)url
+                  Data:(NSData*)data
+                 Token:(NSString *)token{
+    //NSData *imageData = UIImageJPEGRepresentation(image, 1);
+    NSString *urlString = url;
+    NSString *boundary = @"Weconnex";
+    NSMutableData *body = [NSMutableData data];
+    
+    
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setURL:[NSURL URLWithString:urlString]];
+    [request setHTTPMethod:@"POST"];
+    NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@",boundary];
+    [request addValue:contentType forHTTPHeaderField:@"Content-Type"];
+    
+    
+
+     // add token
+    [body appendData:[[NSString stringWithFormat:@"--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"\r\n\r\n", @"token"] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"%@\r\n", token] dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    ////Add Image data
+    [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[@"Content-Disposition: form-data; name=\"fileToUpload\"; filename=\"squaretwosmall.jpg\"\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
+
+    [body appendData:[@"Content-Type: application/octet-stream\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[NSData dataWithData:data]];
+    [body appendData:[[NSString stringWithFormat:@"\r\n--%@--\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    [request setHTTPBody:body];
+    
+    
+//    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+//    [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
+//     {
+//         
+//         NSData *returnData = data;
+//         NSString *returnString = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
+//         NSLog(@"data recieved!");
+//         
+//         //Do what you want with your return data.
+//         
+//     }];
+    
+    
+        NSData *returnData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+        NSString *returnString = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
+    return returnString;
+}
+
 +(id)getDataWithURL:(NSString *)dst_url
   WithPostParameter:(NSString*)para{
     NSString *bodyData = para;
