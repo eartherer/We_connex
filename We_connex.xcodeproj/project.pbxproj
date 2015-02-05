@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00EF579B1A83162B0044B113 /* ViewController_test.m in Sources */ = {isa = PBXBuildFile; fileRef = 00EF579A1A83162B0044B113 /* ViewController_test.m */; };
 		F5254B661A73634100DFC5BC /* Connect_Url.m in Sources */ = {isa = PBXBuildFile; fileRef = F5254B651A73634100DFC5BC /* Connect_Url.m */; };
 		F5942EB71A74A00100D39266 /* QA_Service.m in Sources */ = {isa = PBXBuildFile; fileRef = F5942EB61A74A00100D39266 /* QA_Service.m */; };
 		F5942EBA1A74A20600D39266 /* Alert_Service.m in Sources */ = {isa = PBXBuildFile; fileRef = F5942EB91A74A20600D39266 /* Alert_Service.m */; };
@@ -32,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00EF57991A83162B0044B113 /* ViewController_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController_test.h; sourceTree = "<group>"; };
+		00EF579A1A83162B0044B113 /* ViewController_test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController_test.m; sourceTree = "<group>"; };
 		F5254B641A73634100DFC5BC /* Connect_Url.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connect_Url.h; sourceTree = "<group>"; };
 		F5254B651A73634100DFC5BC /* Connect_Url.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Connect_Url.m; sourceTree = "<group>"; };
 		F5942EB51A74A00100D39266 /* QA_Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QA_Service.h; sourceTree = "<group>"; };
@@ -114,6 +117,8 @@
 				F5942EB61A74A00100D39266 /* QA_Service.m */,
 				F5942EB81A74A20600D39266 /* Alert_Service.h */,
 				F5942EB91A74A20600D39266 /* Alert_Service.m */,
+				00EF57991A83162B0044B113 /* ViewController_test.h */,
+				00EF579A1A83162B0044B113 /* ViewController_test.m */,
 			);
 			path = We_connex;
 			sourceTree = "<group>";
@@ -248,6 +253,7 @@
 				F5942EB71A74A00100D39266 /* QA_Service.m in Sources */,
 				F594D7CA1A6E26B4002BE7C3 /* ViewController.m in Sources */,
 				F594D7C71A6E26B4002BE7C3 /* AppDelegate.m in Sources */,
+				00EF579B1A83162B0044B113 /* ViewController_test.m in Sources */,
 				F5254B661A73634100DFC5BC /* Connect_Url.m in Sources */,
 				F5BAB3031A7367E5007794D2 /* Profile_Area_Service.m in Sources */,
 				F594D7C41A6E26B4002BE7C3 /* main.m in Sources */,
