@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		00EF579B1A83162B0044B113 /* ViewController_test.m in Sources */ = {isa = PBXBuildFile; fileRef = 00EF579A1A83162B0044B113 /* ViewController_test.m */; };
 		F5254B661A73634100DFC5BC /* Connect_Url.m in Sources */ = {isa = PBXBuildFile; fileRef = F5254B651A73634100DFC5BC /* Connect_Url.m */; };
+		F57772B41A835DD100E590E9 /* Chat_Service.m in Sources */ = {isa = PBXBuildFile; fileRef = F57772B31A835DD100E590E9 /* Chat_Service.m */; };
 		F5942EB71A74A00100D39266 /* QA_Service.m in Sources */ = {isa = PBXBuildFile; fileRef = F5942EB61A74A00100D39266 /* QA_Service.m */; };
 		F5942EBA1A74A20600D39266 /* Alert_Service.m in Sources */ = {isa = PBXBuildFile; fileRef = F5942EB91A74A20600D39266 /* Alert_Service.m */; };
 		F594D7C41A6E26B4002BE7C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F594D7C31A6E26B4002BE7C3 /* main.m */; };
@@ -37,6 +38,8 @@
 		00EF579A1A83162B0044B113 /* ViewController_test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController_test.m; sourceTree = "<group>"; };
 		F5254B641A73634100DFC5BC /* Connect_Url.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connect_Url.h; sourceTree = "<group>"; };
 		F5254B651A73634100DFC5BC /* Connect_Url.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Connect_Url.m; sourceTree = "<group>"; };
+		F57772B21A835DD100E590E9 /* Chat_Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chat_Service.h; sourceTree = "<group>"; };
+		F57772B31A835DD100E590E9 /* Chat_Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chat_Service.m; sourceTree = "<group>"; };
 		F5942EB51A74A00100D39266 /* QA_Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QA_Service.h; sourceTree = "<group>"; };
 		F5942EB61A74A00100D39266 /* QA_Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QA_Service.m; sourceTree = "<group>"; };
 		F5942EB81A74A20600D39266 /* Alert_Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alert_Service.h; sourceTree = "<group>"; };
@@ -99,6 +102,8 @@
 		F594D7C01A6E26B4002BE7C3 /* We_connex */ = {
 			isa = PBXGroup;
 			children = (
+				F57772B21A835DD100E590E9 /* Chat_Service.h */,
+				F57772B31A835DD100E590E9 /* Chat_Service.m */,
 				F594D7C51A6E26B4002BE7C3 /* AppDelegate.h */,
 				F594D7C61A6E26B4002BE7C3 /* AppDelegate.m */,
 				F594D7C81A6E26B4002BE7C3 /* ViewController.h */,
@@ -257,6 +262,7 @@
 				F5254B661A73634100DFC5BC /* Connect_Url.m in Sources */,
 				F5BAB3031A7367E5007794D2 /* Profile_Area_Service.m in Sources */,
 				F594D7C41A6E26B4002BE7C3 /* main.m in Sources */,
+				F57772B41A835DD100E590E9 /* Chat_Service.m in Sources */,
 				F5BAB3061A73F152007794D2 /* News_Service.m in Sources */,
 				F5942EBA1A74A20600D39266 /* Alert_Service.m in Sources */,
 			);

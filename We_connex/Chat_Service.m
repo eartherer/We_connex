@@ -10,6 +10,7 @@
 #import "Connect_Url.h"
 @implementation Chat_Service
 
+/////
 +(NSObject*)getThreadIDByUserID_1:(NSString*)userid1
            AndUserID_2:(NSString*)userid2{
     NSString *bodyData = [NSString stringWithFormat:@"OP=GET_THREAD_ID_BY_PAIR&id1=%@&id2=%@",userid1,userid2];
