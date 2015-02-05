@@ -12,18 +12,20 @@
 #import "Profile_Area_Service.h"
 #import "Connect_Url.h"
 #import "QA_Service.h"
-@interface ViewController ()
+@interface ViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 -(NSObject*)getDataWithURL:(NSString*)dst_url;
 @end
 
 @implementation ViewController
-
+@synthesize showImg;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
 //    [QA_Service createTopicWithTitle:@"Topic from xcode" Body:@"post from xcode" Token:@"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9iZWVjb25uZXguYXp1cmV3ZWJzaXRlcy5uZXQiLCJhdWQiOiJodHRwOlwvXC9iZWVjb25uZXguYXp1cmV3ZWJzaXRlcy5uZXQiLCJpYXQiOjE0MjI0MjU3NTksImV4cCI6MTQyMjQyOTM1OSwidXNlcm5hbWUiOiJhZG1pbiIsIklEIjoiMTEwMzcwMDk5MTkxMyJ9.N6XRWpMxcwPJeW9FdMH51AwZ1Zfh49mEBsY1TciqxmI"];
 //    [QA_Service createReplyWithTopicID:@"7" Body:@"Reply from xcode" Token:@"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9iZWVjb25uZXguYXp1cmV3ZWJzaXRlcy5uZXQiLCJhdWQiOiJodHRwOlwvXC9iZWVjb25uZXguYXp1cmV3ZWJzaXRlcy5uZXQiLCJpYXQiOjE0MjI0MjU3NTksImV4cCI6MTQyMjQyOTM1OSwidXNlcm5hbWUiOiJhZG1pbiIsIklEIjoiMTEwMzcwMDk5MTkxMyJ9.N6XRWpMxcwPJeW9FdMH51AwZ1Zfh49mEBsY1TciqxmI"];
-    [Profile_Area_Service createAreaWithLatitude:13.4456 Longitude:103.2343 isOwner:1 Size:35.45 AreaType:@"ที่ราบ" LandType:@"ดินร่วน" HouseNo:@"-" VillageNo:@"-" Alley:@"นาเกลือ" Road:@"บางบ่อ" Sub_District:@"อยุธยา" District:@"อยุธยา" Province:@"กรุงเทพ" Zip_Code:@"70013" Token:@"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9iZWVjb25uZXguYXp1cmV3ZWJzaXRlcy5uZXQiLCJhdWQiOiJodHRwOlwvXC9iZWVjb25uZXguYXp1cmV3ZWJzaXRlcy5uZXQiLCJpYXQiOjE0MjI1NDg3MzgsImV4cCI6MTQyMjU1MjMzOCwidXNlcm5hbWUiOiJ4Y29kZSIsIklEIjoiMTEwMzcwMDExMTkxMyJ9.A_bwF6B4p55z9nYwdAPVCJIsfLu3SUZLTu_ogcwufN8"];
+//    [Profile_Area_Service createAreaWithLatitude:13.4456 Longitude:103.2343 isOwner:1 Size:35.45 AreaType:@"ที่ราบ" LandType:@"ดินร่วน" HouseNo:@"-" VillageNo:@"-" Alley:@"นาเกลือ" Road:@"บางบ่อ" Sub_District:@"อยุธยา" District:@"อยุธยา" Province:@"กรุงเทพ" Zip_Code:@"70013" Token:@"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9iZWVjb25uZXguYXp1cmV3ZWJzaXRlcy5uZXQiLCJhdWQiOiJodHRwOlwvXC9iZWVjb25uZXguYXp1cmV3ZWJzaXRlcy5uZXQiLCJpYXQiOjE0MjI1NDg3MzgsImV4cCI6MTQyMjU1MjMzOCwidXNlcm5hbWUiOiJ4Y29kZSIsIklEIjoiMTEwMzcwMDExMTkxMyJ9.A_bwF6B4p55z9nYwdAPVCJIsfLu3SUZLTu_ogcwufN8"];
+//    [Profile_Area_Service createAreaWithLatitude:13.4456 Longitude:103.2343 isOwner:1 Size:35.45 AreaType:@"ที่ราบ" LandType:@"ดินร่วน" HouseNo:@"-" VillageNo:@"-" Alley:@"นาเกลือ" Road:@"บางบ่อ" Sub_District:@"อยุธยา" District:@"อยุธยา" Province:@"กรุงเทพ" Zip_Code:@"70013" Token:@"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9iZWVjb25uZXguYXp1cmV3ZWJzaXRlcy5uZXQiLCJhdWQiOiJodHRwOlwvXC9iZWVjb25uZXguYXp1cmV3ZWJzaXRlcy5uZXQiLCJpYXQiOjE0MjI0MjU3NTksImV4cCI6MTQyMjQyOTM1OSwidXNlcm5hbWUiOiJhZG1pbiIsIklEIjoiMTEwMzcwMDk5MTkxMyJ9.N6XRWpMxcwPJeW9FdMH51AwZ1Zfh49mEBsY1TciqxmI"];
+
 //    [News_Service createNewsWithTitle:@"Xcode" Body:@"fromcode" lalitude:14.55 longitude:101.44 token:@"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9iZWVjb25uZXguYXp1cmV3ZWJzaXRlcy5uZXQiLCJhdWQiOiJodHRwOlwvXC9iZWVjb25uZXguYXp1cmV3ZWJzaXRlcy5uZXQiLCJpYXQiOjE0MjIzMzE4MDAsImV4cCI6MTQyMjMzNTQwMCwidXNlcm5hbWUiOiJhZG1pbiIsIklEIjoiMTEwMzcwMDk5MTkxMyJ9.7Epks8rziq_z5EQ9t7GLS39n-a_cl5109ivPxsbei_w"];
 //    [Alert_Service createAlertWithTitle:@"Xcode" Body:@"fromcode" lalitude:14.55 longitude:101.44 Group: @"All" token:@"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9iZWVjb25uZXguYXp1cmV3ZWJzaXRlcy5uZXQiLCJhdWQiOiJodHRwOlwvXC9iZWVjb25uZXguYXp1cmV3ZWJzaXRlcy5uZXQiLCJpYXQiOjE0MjIzMzE4MDAsImV4cCI6MTQyMjMzNTQwMCwidXNlcm5hbWUiOiJhZG1pbiIsIklEIjoiMTEwMzcwMDk5MTkxMyJ9.7Epks8rziq_z5EQ9t7GLS39n-a_cl5109ivPxsbei_w"];
 //    NSObject *obj = [Profile_Area_Service registerWithUsername:@"xcode2" Password:@"123456" ID:@"1103700221913" Email:@"xcoode2@hotmail.com"];
@@ -85,5 +87,154 @@
         return error;
     }
 
+}
+-(void)up2:(UIImage*)image{
+    NSData *imageData = UIImageJPEGRepresentation(image, 1);
+    NSString *urlString = @"http://beeconnex.azurewebsites.net/up_file.php?op=up&numberID=1103700881913";
+    
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setURL:[NSURL URLWithString:urlString]];
+    [request setHTTPMethod:@"POST"];
+    
+    NSString *boundary = @"Weconnex";
+    NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@", boundary];
+    [request addValue:contentType forHTTPHeaderField:@"Content-Type"];
+    
+    NSMutableData *body = [NSMutableData data];
+    [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[@"Content-Disposition: form-data; name=\"fileToUpload\"; filename=\"squaretwosmall.jpg\"\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[@"Content-Type: application/octet-stream\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[NSData dataWithData:imageData]];
+    [body appendData:[[NSString stringWithFormat:@"\r\n--%@--\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    [request setHTTPBody:body];
+    
+    
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
+     {
+         
+         NSData *returnData = data;
+         NSString *returnString = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
+         NSLog(@"data recieved!");
+         
+         //Do what you want with your return data.
+         
+     }];
+    
+    
+//    NSData *returnData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+//    NSString *returnString = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
+
+}
+
+-(void)uploadImage:(UIImage*)image{
+                 if (1) {
+                 // Build the request body
+                 NSString *boundary = @"WeConnex";
+                 NSMutableData *body = [NSMutableData data];
+                 
+                 // uid
+//                 [body appendData:[[NSString stringWithFormat:@"--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+//                 [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"\r\n\r\n", @"uid"] dataUsingEncoding:NSUTF8StringEncoding]];
+//                 [body appendData:[[NSString stringWithFormat:@"%@\r\n", uid] dataUsingEncoding:NSUTF8StringEncoding]];
+                 
+                     
+                     //capt
+//                 [body appendData:[[NSString stringWithFormat:@"--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+//                 [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"\r\n\r\n", @"caption"] dataUsingEncoding:NSUTF8StringEncoding]];
+//                 [body appendData:[[NSString stringWithFormat:@"%@\r\n", capt] dataUsingEncoding:NSUTF8StringEncoding]];
+                     
+                     
+                 // Body part for the attachament. This is an image.
+                 NSData *imageData = UIImageJPEGRepresentation(image, 1);
+                 if (imageData) {
+                     [body appendData:[[NSString stringWithFormat:@"--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+                     [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"; filename=\"image.jpg\"\r\n", @"fileToUpload"] dataUsingEncoding:NSUTF8StringEncoding]];
+                     [body appendData:[@"Content-Type: image/jpeg\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
+                     [body appendData:imageData];
+                     [body appendData:[[NSString stringWithFormat:@"\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+                 }
+                 [body appendData:[[NSString stringWithFormat:@"--%@--\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+                 
+                 // Setup the session
+//                 NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
+//                 sessionConfiguration.HTTPAdditionalHeaders = @{
+//                                                                @"api-key"       : @"55e76dc4bbae25b066cb",
+//                                                                @"Accept"        : @"application/json",
+//                                                                @"Content-Type"  : [NSString stringWithFormat:@"multipart/form-data; boundary=%@", boundary]
+//                                                                };
+                 
+                 // Create the session
+                 // We can use the delegate to track upload progress
+//                 NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfiguration delegate:self delegateQueue:nil];
+                 
+                 // Data uploading task. We could use NSURLSessionUploadTask instead of NSURLSessionDataTask if we needed to support uploads in the background
+                 NSURL *url = [NSURL URLWithString:@"http://beeconnex.azurewebsites.net/up_file.php?op=add&numberID=1103700881913"];
+                 NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+                 request.HTTPMethod = @"POST";
+                 request.HTTPBody = body;
+                 NSData *returnData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+                 NSString *returnString = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
+    
+//                 NSURLSessionDataTask *uploadTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+//                     // Process the response
+//                     NSString *charlieSendString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+//                     [self.view hideToastActivity];
+//                     NSLog(charlieSendString);
+//                     if([charlieSendString isEqualToString:@"DONE"])
+//                     {
+//                         [self.view.window  makeToast:@"Upload Successful" duration:2.0 position:@"bottom"];
+//                         self.cap.text = @"";
+//                         self.imgg.image = [UIImage imageNamed:@"uppic.jpg"];
+//                         [[[[self.tabBarController tabBar]items]objectAtIndex:1]setEnabled:TRUE];
+//                         [[[[self.tabBarController tabBar]items]objectAtIndex:2]setEnabled:TRUE];
+//                         [[[[self.tabBarController tabBar]items]objectAtIndex:0]setEnabled:TRUE];
+//                         self.cap.enabled = YES;
+//                         self.btupload.enabled = YES;
+//                         //[self.tabBarController setSelectedIndex:1];
+//                     }
+//                     else
+//                     {
+//                         [self.view.window  makeToast:@"Uppload Failed" duration:2.0 position:@"bottom"];
+//                         //[self.tabBarController setSelectedIndex:1];
+//                     }
+//                     
+//                 }];
+                 
+             
+         }
+}
+
+- (IBAction)upimg:(id)sender {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    [self presentViewController:picker animated:YES completion:NULL];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    
+    showImg.image = chosenImage;
+    //[self up2:chosenImage];
+    NSData *imageData = UIImageJPEGRepresentation(chosenImage, 1);
+
+//    [Connect_Url uploadDataWithURL:@"http://beeconnex.azurewebsites.net/up_file.php?op=up&numberID=1103700881913" Data:imageData];
+    [Profile_Area_Service uploadProfileImage:chosenImage token:@"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9iZWVjb25uZXguYXp1cmV3ZWJzaXRlcy5uZXQiLCJhdWQiOiJodHRwOlwvXC9iZWVjb25uZXguYXp1cmV3ZWJzaXRlcy5uZXQiLCJpYXQiOjE0MjI4NjYyMjAsImV4cCI6MTQyMjg2OTgyMCwidXNlcm5hbWUiOiJhZG1pbiIsIklEIjoiMTEwMzcwMDk5MTkxMyJ9.qyrlgA1V7U43Vkkp-y843mKxCdTFqiIs1IwFNSKyts4"];
+    //imgg.image = chosenImage;
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    if (picker.sourceType == UIImagePickerControllerSourceTypeCamera) {
+        UIImageWriteToSavedPhotosAlbum(info[UIImagePickerControllerOriginalImage], nil, nil, nil);
+    }
+}
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    //[self.tabBarController setSelectedIndex:1];
+    
+    
 }
 @end

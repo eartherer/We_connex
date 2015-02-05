@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+- (IBAction)upimg:(id)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *showImg;
 
 
 @end
