@@ -17,4 +17,9 @@
 
 +(id)getDataWithURL:(NSString *)dst_url
   WithPostParameter:(NSString*)para;
+
++(id)uploadAreaDataWithURL:(NSString*)url
+                      Data:(NSData*)data
+                     Token:(NSString *)token
+                    areaID:(NSString*)areaID;
 @end

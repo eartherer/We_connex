@@ -129,4 +129,11 @@
     
     return [Connect_Url uploadDataWithURL:@"http://beeconnex.azurewebsites.net/up_file.php?op=up" Data:imageData Token:token];
 }
++(NSObject*)uploadAreaImage:(UIImage*)image
+                         token:(NSString*)token
+                     AreaID:(NSString*)areaID{
+    NSData *imageData = UIImageJPEGRepresentation(image, 1);
+    
+    return [Connect_Url uploadAreaDataWithURL:@"http://beeconnex.azurewebsites.net/up_file_area.php?op=up" Data:imageData Token:token areaID:areaID];
+}
 @end

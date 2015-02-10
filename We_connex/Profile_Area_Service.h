@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 @interface Profile_Area_Service : NSObject
+
++(NSObject*)uploadAreaImage:(UIImage*)image
+                      token:(NSString*)token
+                     AreaID:(NSString*)areaID;
+
 +(NSObject*)getAreaImageListByAreaID:(NSString*)areaID;
 
 +(NSString*)getDataContainerByAreaID:(NSString*)areaID;
