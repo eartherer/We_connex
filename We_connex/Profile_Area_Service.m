@@ -78,6 +78,16 @@
     }
     return resultObj;
 }
++(NSObject*)getAreaImageListByAreaID:(NSString*)areaID{
+    NSString* myurl = [NSString stringWithFormat:@"http://beeconnex.azurewebsites.net/area.php?OP=show_areapic&areaID=%@",areaID];
+    //id resultObj = [self getDataWithURL:myurl];
+    id resultObj = [Connect_Url getDataWithURL:myurl];
+    if ([resultObj isKindOfClass:[NSDictionary class]]) {
+        NSLog(@"dsafasf");
+    }
+    return resultObj;
+}
+
 +(NSObject*)getProfileByID:(NSString*)numberID{
     NSString* myurl = [NSString stringWithFormat:@"http://beeconnex.azurewebsites.net/profile.php?OP=show_id&numberID=%@",numberID];
     //NSObject *resultObj = [self getDataWithURL:myurl];
