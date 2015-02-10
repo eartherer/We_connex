@@ -11,6 +11,10 @@
 @interface Profile_Area_Service : NSObject
 +(NSObject*)getAreaImageListByAreaID:(NSString*)areaID;
 
++(NSString*)getDataContainerByAreaID:(NSString*)areaID;
+
++(NSString*)getBeeDataByContainerID:(NSString*)conID;
+
 +(NSObject*)uploadProfileImage:(UIImage*)image
                          token:(NSString*)token;
 
