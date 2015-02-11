@@ -54,10 +54,27 @@
 //         
 //     }];
     
-    
+        NSURLResponse * response = nil;
+        NSError * error = nil;
         NSData *returnData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
         NSString *returnString = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
-    return returnString;
+        if (error == nil)
+        {
+            NSError *e = nil;
+            id jsonArray = [NSJSONSerialization JSONObjectWithData: returnData options: NSJSONReadingMutableContainers error: &e];
+        
+            if (!jsonArray)
+            {
+                return e;
+            }else
+            {
+                return jsonArray;
+            }
+        }else
+        {
+        return error;
+    }
+   //return returnString;
 }
 
 +(id)uploadAreaDataWithURL:(NSString*)url
@@ -110,10 +127,27 @@
     //
     //     }];
     
-    
-    NSData *returnData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    NSURLResponse * response = nil;
+    NSError * error = nil;
+    NSData *returnData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     NSString *returnString = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
-    return returnString;
+    if (error == nil)
+    {
+        NSError *e = nil;
+        id jsonArray = [NSJSONSerialization JSONObjectWithData: returnData options: NSJSONReadingMutableContainers error: &e];
+        
+        if (!jsonArray)
+        {
+            return e;
+        }else
+        {
+            return jsonArray;
+        }
+    }else
+    {
+        return error;
+    }
+    //return returnString;
 }
 
 
