@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedCell" rowHeight="163" id="Wvq-oV-dyk" customClass="FeedCellTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="163"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wvq-oV-dyk" id="74R-KK-RlM">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Equ-rI-HAc">
+                        <rect key="frame" x="8" y="8" width="55" height="55"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUc-Tg-i7H">
+                        <rect key="frame" x="71" y="43" width="241" height="21"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaO-wy-RZ8">
+                        <rect key="frame" x="71" y="14" width="241" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65u-Ab-tHZ">
+                        <rect key="frame" x="8" y="72" width="304" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDL-Im-qFS">
+                        <rect key="frame" x="8" y="101" width="304" height="55"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="SaO-wy-RZ8" firstAttribute="leading" secondItem="Equ-rI-HAc" secondAttribute="trailing" constant="8" id="0BN-Mb-Z0P"/>
+                    <constraint firstItem="Equ-rI-HAc" firstAttribute="leading" secondItem="74R-KK-RlM" secondAttribute="leading" constant="8" id="2a7-Hn-ccV"/>
+                    <constraint firstAttribute="trailing" secondItem="SaO-wy-RZ8" secondAttribute="trailing" constant="8" id="3HO-pC-Z2W"/>
+                    <constraint firstAttribute="trailing" secondItem="hUc-Tg-i7H" secondAttribute="trailing" constant="8" id="4dy-Qb-K1q"/>
+                    <constraint firstItem="65u-Ab-tHZ" firstAttribute="top" secondItem="hUc-Tg-i7H" secondAttribute="bottom" constant="8" id="8Dh-OH-33w"/>
+                    <constraint firstItem="65u-Ab-tHZ" firstAttribute="leading" secondItem="74R-KK-RlM" secondAttribute="leading" constant="8" id="IjL-oP-oFg"/>
+                    <constraint firstAttribute="trailing" secondItem="65u-Ab-tHZ" secondAttribute="trailing" constant="8" id="JH5-5T-5Cd"/>
+                    <constraint firstItem="hUc-Tg-i7H" firstAttribute="top" secondItem="SaO-wy-RZ8" secondAttribute="bottom" constant="8" id="KIu-Jx-5ZP"/>
+                    <constraint firstAttribute="trailing" secondItem="FDL-Im-qFS" secondAttribute="trailing" constant="8" id="NJo-gO-s1d"/>
+                    <constraint firstItem="FDL-Im-qFS" firstAttribute="leading" secondItem="74R-KK-RlM" secondAttribute="leading" constant="8" id="ifA-90-cUC"/>
+                    <constraint firstItem="hUc-Tg-i7H" firstAttribute="leading" secondItem="Equ-rI-HAc" secondAttribute="trailing" constant="8" id="me5-h1-Jt9"/>
+                    <constraint firstItem="SaO-wy-RZ8" firstAttribute="top" secondItem="74R-KK-RlM" secondAttribute="top" constant="14" id="n4T-YK-Dod"/>
+                    <constraint firstItem="FDL-Im-qFS" firstAttribute="top" secondItem="65u-Ab-tHZ" secondAttribute="bottom" constant="8" id="uyI-lX-OTI"/>
+                    <constraint firstItem="Equ-rI-HAc" firstAttribute="top" secondItem="74R-KK-RlM" secondAttribute="top" constant="8" id="wrm-9P-2L3"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="addDate" destination="hUc-Tg-i7H" id="uiJ-tL-DNn"/>
+                <outlet property="adderImage" destination="Equ-rI-HAc" id="iNc-2y-ar7"/>
+                <outlet property="adderName" destination="SaO-wy-RZ8" id="ozZ-eg-qQ1"/>
+                <outlet property="body" destination="FDL-Im-qFS" id="I3u-Dr-k1D"/>
+                <outlet property="topic" destination="65u-Ab-tHZ" id="h5T-cj-KcO"/>
+            </connections>
+            <point key="canvasLocation" x="300" y="228.5"/>
+        </tableViewCell>
+    </objects>
+</document>

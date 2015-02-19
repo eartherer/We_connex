@@ -1,5 +1,5 @@
 //
-//  ViewController_test.h
+//  Feed_Select_TableViewController.h
 //  We_connex
 //
 //  Created by macbook cpe00 on 2/5/2558 BE.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController_test : UIViewController
+@interface Feed_Select_TableViewController : UITableViewController
 
 @end

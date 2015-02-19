@@ -1,22 +1,26 @@
 //
-//  ViewController_test.m
+//  testViewController.m
 //  We_connex
 //
-//  Created by macbook cpe00 on 2/5/2558 BE.
+//  Created by macbook cpe00 on 2/18/2558 BE.
 //  Copyright (c) 2558 Earther. All rights reserved.
 //
 
-#import "ViewController_test.h"
+#import "testViewController.h"
 
-@interface ViewController_test ()
+@interface testViewController ()
 
 @end
 
-@implementation ViewController_test
+@implementation testViewController
+@synthesize scrollView;
+@synthesize contentView;
+@synthesize labelText;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //test commit
+    labelText.text = @"sdnbsjkbfsnfjsdbfsdbfjabdjfbajkdsbfjkabdsjkfbadjs,bfjkadbsfkjbadsjbfadjsfjadsbfjkasdb";
+    //self.scrollView.contentSize = CGSizeMake(400, 1200);
     // Do any additional setup after loading the view.
 }
 
