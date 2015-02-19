@@ -137,4 +137,12 @@
     return [Connect_Url uploadAreaDataWithURL:@"http://beeconnex.azurewebsites.net/up_area_pic.php?op=up" Data:imageData Token:token areaID:areaID];
 }
 
++(NSObject*)getAreaListByOwnerID:(NSString*)ID{
+    
+    NSString* myurl = [NSString stringWithFormat:@"http://beeconnex.azurewebsites.net/area.php?OP=show_id&numberID=%@",ID];
+    //NSObject *resultObj = [self getDataWithURL:myurl];
+    id resultObj = [Connect_Url getDataWithURL:myurl];
+    return resultObj;
+}
+
 @end

@@ -10,6 +10,8 @@
 #import <UIKit/UIKit.h>
 @interface Profile_Area_Service : NSObject
 
++(NSObject*)getAreaListByOwnerID:(NSString*)ID;
+
 +(NSObject*)uploadAreaImage:(UIImage*)image
                       token:(NSString*)token
                      AreaID:(NSString*)areaID;
